@@ -86,6 +86,35 @@ export default function MoodQuiz(){
     window.open(`https://wa.me/?text=${text}`,'_blank');
   }
 
+  const handleFinish = () => { 
+    // Después de calcular las respuestas finales, agrega lo siguiente:
+
+    const formatted = Object.entries(answers)
+      .map(([key, value]) => {
+        const pregunta = questions[key].question;
+        const opcion = Array.isArray(value)
+          ? value.map(v => questions[key].options[v]).join(", ")
+          : questions[key].options[value];
+
+        return `${pregunta} → ${opcion}`;
+      })
+      .join("\n");
+
+    const mensaje = `Emily respondió:\n\n${formatted}`;
+
+    // Tu número aquí:
+    const numero = "573001234567"; 
+
+    // Enviar mensaje a WhatsApp automáticamente
+    const whatsappURL = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+    }, 800);
+
+   }
+
+
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       <div className="w-full max-w-md">
