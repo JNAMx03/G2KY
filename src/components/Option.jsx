@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Option({ text, selected, onClick, type }){
+export default function Option({ text, selected, onClick, type, disabled }){
   return (
     <button
       onClick={onClick}

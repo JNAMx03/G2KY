@@ -1,7 +1,7 @@
 import React from "react";
 import Option from "./Option";
 
-export default function QuizScreen({ question, index, total, answers, onToggleMulti, onSetSingle, onNext, onBack }){
+export default function QuizScreen({ question, index, total, answers, onToggleMulti, onSetSingle, onNext, onBack, disabled }){
   const selected = answers[question.id] || [];
 
   return (
