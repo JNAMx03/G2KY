@@ -21,6 +21,7 @@ export default function QuizScreen({ question, index, total, answers, onToggleMu
             selected={selected.includes(i)}
             type={question.type}
             onClick={() => question.type === 'single' ? onSetSingle(question.id,i) : onToggleMulti(question.id,i)}
+            disabled={disabled}
           />
         ))}
       </div>
