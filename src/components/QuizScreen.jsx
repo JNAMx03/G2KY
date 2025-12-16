@@ -15,9 +15,10 @@ export default function QuizScreen({
 }) {
   return (
     <div>
-      <p className="text-sm text-gray-500">
-        Pregunta {index + 1} / {total}
-      </p>
+      <div className="flex items-center justify-between mb-3">
+        <div className="text-sm text-gray-500">Pregunta {index + 1} / {total}</div>
+        <div className="text-sm text-gray-400">{question.type === 'single' ? 'Elige 1' : 'Puedes elegir varias'}</div>
+      </div>
 
       <h2 className="text-lg font-medium mt-2">{question.text}</h2>
 
