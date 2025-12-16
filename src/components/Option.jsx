@@ -4,12 +4,19 @@ export default function Option({ text, selected, onClick, type, disabled }){
   return (
     <button
       onClick={onClick}
-      disabled={disabled}
-      className={`text-left p-3 rounded-xl border transition-all duration-150 ${selected ? 'bg-purple-50 border-purple-300' : 'bg-gray-50 border-transparent hover:border-gray-200'}`}
+      className={`w-full text-left p-4 rounded-xl border transition-all
+        ${selected
+          ? "bg-purple-50 border-purple-400"
+          : "bg-gray-50 border-gray-200 hover:border-gray-300"}
+      `}
     >
-      <div className="flex items-center justify-between">
-        <div className="font-medium">{text}</div>
-        <div className="text-xs text-gray-400">{selected ? (type === 'single' ? 'Seleccionado' : '✓') : ''}</div>
+      <div className="flex items-center justify-between gap-4">
+        <span className="font-medium leading-snug">{text}</span>
+        {selected && (
+          <span className="text-xs text-purple-500 whitespace-nowrap">
+            ✓ Seleccionado
+          </span>
+        )}
       </div>
     </button>
   );

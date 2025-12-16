@@ -1,16 +1,21 @@
 import React from "react";
 
-export default function FinalScreen({ summary, onShare, onRestart }){
+export default function FinalScreen({ summary, onRestart }) {
   return (
     <div>
-      <h2 className="text-2xl font-semibold text-center">Tu resultado ✨</h2>
-      <p className="text-center text-gray-600 mt-3">{summary}</p>
+      <h2 className="text-2xl font-semibold text-center">✨ GRACIAS POR PARTICIPAR :P ✨</h2>
 
-      <div className="mt-6 grid gap-3">
-        {/* onShare se deja vacío porque se usa EmailJS automático; se deja para futuro */}
-        {/* <button onClick={onShare} className="py-3 rounded-xl bg-green-400 text-white font-semibold">Compartir resultado</button> */}
-        <button onClick={onRestart} className="py-3 rounded-xl border">Volver a jugar</button>
-      </div>
+      {/* <div className="mt-4 text-center text-gray-700 whitespace-pre-wrap leading-relaxed">
+        {summary}
+      </div> */}
+
+      <button
+        onClick={onRestart}
+        className="mt-6 w-full py-3 rounded-xl bg-purple-400 text-white font-semibold"
+      >
+        Volver a jugar
+      </button>
     </div>
   );
 }
+
