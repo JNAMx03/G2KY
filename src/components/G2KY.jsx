@@ -10,19 +10,87 @@ export default function G2KY() {
   const questions = useMemo(() => [
     {
       id: 1,
-      text: "¿Cómo describirías tu estilo?",
+      text: "¿Anime favorito?",
       type: "single",
       options: ["Casual", "Elegante", "Deportivo", "Otro"],
     },
     {
       id: 2,
-      text: "¿Qué colores te gustan?",
+      text: "¿personaje de anime favorito?",
       type: "multi",
       options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
     },
     {
       id: 3,
-      text: "Cuéntame algo que te guste mucho últimamente",
+      text: "¿anime del momento?",
+      type: "text",
+    },
+    {
+      id: 4,
+      text: "¿musica favorita?",
+      type: "single",
+      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+    },
+    {
+      id: 5,
+      text: "¿artista o grupo favorito?",
+      type: "multi",
+      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+    },
+    {
+      id: 6,
+      text: "¿artista o grupo del momento?",
+      type: "text",
+    },
+    {
+      id: 7,
+      text: "¿que tipo de accesorios usas normalmente?",
+      type: "single",
+      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+    },
+    {
+      id: 8,
+      text: "¿colore(s) favorito(s)?",
+      type: "multi",
+      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+    },
+    {
+      id: 9,
+      text: "¿video juego favorito?",
+      type: "text",
+    },
+    {
+      id: 10,
+      text: "¿video juego del momento?",
+      type: "single",
+      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+    },
+    {
+      id: 11,
+      text: "¿Estilo que más te representa?",
+      type: "multi",
+      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+    },
+    {
+      id: 12,
+      text: "¿Qué prefieres más para relajarte?",
+      type: "text",
+    },
+    {
+      id: 13,
+      text: "¿Eres más de planes tranquilos o planes espontáneos?",
+      type: "single",
+      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+    },
+    {
+      id: 14,
+      text: "¿Algo que te guste mucho y casi nadie sepa?👀",
+      type: "multi",
+      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+    },
+    {
+      id: 15,
+      text: "¿Te consideras más de detalles pequeños o de cosas grandes?",
       type: "text",
     },
   ], []);
