@@ -11,14 +11,12 @@ export default function G2KY() {
     {
       id: 1,
       text: "¿Anime favorito?",
-      type: "single",
-      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+      type: "text",
     },
     {
       id: 2,
       text: "¿personaje de anime favorito?",
-      type: "multi",
-      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+      type: "text",
     },
     {
       id: 3,
@@ -27,15 +25,13 @@ export default function G2KY() {
     },
     {
       id: 4,
-      text: "¿musica favorita?",
-      type: "single",
-      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+      text: "¿genero de musica favorita?",
+      type: "text",
     },
     {
       id: 5,
       text: "¿artista o grupo favorito?",
-      type: "multi",
-      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+      type: "text",
     },
     {
       id: 6,
@@ -45,14 +41,14 @@ export default function G2KY() {
     {
       id: 7,
       text: "¿que tipo de accesorios usas normalmente?",
-      type: "single",
-      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+      type: "multi",
+      options: ["Collares", "Anillos", "Manillas", "Aretes", "Otro"],
     },
     {
       id: 8,
       text: "¿colore(s) favorito(s)?",
       type: "multi",
-      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+      options: ["Negro", "Blanco", "Azul", "Rosado", "Pasteles", "Colores fuertes", "Otro"],
     },
     {
       id: 9,
@@ -62,36 +58,36 @@ export default function G2KY() {
     {
       id: 10,
       text: "¿video juego del momento?",
-      type: "single",
-      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+      type: "text",
     },
     {
       id: 11,
       text: "¿Estilo que más te representa?",
       type: "multi",
-      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+      options: ["Casual", "Elegante", "Comodo", "Llamativo", "Otro"],
     },
     {
       id: 12,
       text: "¿Qué prefieres más para relajarte?",
-      type: "text",
+      type: "multi",
+      options: ["Musica", "Series - Anime", "Video juegos", "Dormir", "Otro"],
     },
     {
       id: 13,
-      text: "¿Eres más de planes tranquilos o planes espontáneos?",
+      text: "¿Eres más de planes...?",
       type: "single",
-      options: ["Casual", "Elegante", "Deportivo", "Otro"],
+      options: ["Tranquilos", "Espontaneos", "Otro"],
     },
     {
       id: 14,
       text: "¿Algo que te guste mucho y casi nadie sepa?👀",
-      type: "multi",
-      options: ["Negro", "Blanco", "Pasteles", "Colores fuertes", "Otro"],
+      type: "text",
     },
     {
       id: 15,
-      text: "¿Te consideras más de detalles pequeños o de cosas grandes?",
-      type: "text",
+      text: "¿Te consideras más de detalles..?",
+      type: "single",
+      options: ["Pequeños", "Grandes", "Otro"],
     },
   ], []);
 
