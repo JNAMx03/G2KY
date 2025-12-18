@@ -94,6 +94,8 @@ export default function G2KY() {
   const [started, setStarted] = useState(false);
   const [finished, setFinished] = useState(false);
   const [index, setIndex] = useState(0);
+  const [error, setError] = useState("");
+
 
   // 🔑 estructura estable
   const [answers, setAnswers] = useState({});
@@ -151,28 +153,47 @@ export default function G2KY() {
   }
 
   function handleNext() {
-    if (index + 1 >= questions.length) {
-      const summary = computeSummary();
+  const currentQuestion = questions[index];
+  const answer = answers[currentQuestion.id];
 
-      emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        { message: summary },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(() => {
-        setFinished(true);
-        setStarted(false);
-      })
-      .catch(err => {
-        console.error(err);
-        alert("Error enviando el correo");
-      });
-
-      return;
-    }
-    setIndex(i => i + 1);
+  // ❌ Validación: no respondió
+  if (
+    answer === undefined ||
+    answer === "" ||
+    (Array.isArray(answer) && answer.length === 0)
+  ) {
+    setError("Debes responder esta pregunta antes de continuar");
+    return;
   }
+
+  // ✅ Limpia el error si ya respondió
+  setError("");
+
+  // ⬇️ TU LÓGICA ORIGINAL (NO TOCADA)
+  if (index + 1 >= questions.length) {
+    const summary = computeSummary();
+
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      { message: summary },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+    .then(() => {
+      setFinished(true);
+      setStarted(false);
+    })
+    .catch(err => {
+      console.error(err);
+      alert("Error enviando el correo");
+    });
+
+    return;
+  }
+
+  setIndex(i => i + 1);
+}
+
 
   function handleBack() {
     if (index === 0) {
@@ -227,6 +248,7 @@ export default function G2KY() {
                 onSetTextAnswer={setTextAnswer}
                 onNext={handleNext}
                 onBack={handleBack}
+                error={error}
               />
             </motion.div>
           )}

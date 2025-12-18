@@ -12,6 +12,7 @@ export default function QuizScreen({
   onSetTextAnswer,
   onNext,
   onBack,
+  error,
 }) {
   return (
     <div>
@@ -58,6 +59,12 @@ export default function QuizScreen({
             </div>
           ))}
         </div>
+      )}
+
+      {error && (
+        <p className="mt-3 text-center text-sm text-red-500">
+          {error}
+        </p>
       )}
 
       <div className="mt-6 flex gap-3">
