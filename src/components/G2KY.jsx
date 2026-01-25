@@ -89,6 +89,21 @@ export default function G2KY() {
       type: "single",
       options: ["Pequeños", "Grandes", "Otro"],
     },
+    {
+      id: 16,
+      text: "¿Comida rapida favorita?",
+      type: "text",
+    },
+    {
+      id: 17,
+      type: "¿Comida con un poco mas de preparacion favorita?",
+      type: "text",
+    },
+    {
+      id: 18,
+      type: "¿Snack o chucheria favorita?",
+      type: "text",
+    }
   ], []);
 
   const [started, setStarted] = useState(false);
